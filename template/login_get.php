@@ -25,5 +25,5 @@
 
         <p class="mt-3">Already have an account? <a href="/create_account">Register here</a></p>
         <hr>
-        <a href="home.php" class="btn btn-secondary">Go back</a>
+        <a href="/" class="btn btn-secondary">Go back</a>
 </section>
