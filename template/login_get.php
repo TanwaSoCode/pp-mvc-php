@@ -1,5 +1,12 @@
-
-
+  <?php if (!empty(
+            $_SESSION['message']
+        )): ?>
+            <div class="alert alert-danger" role="alert">
+                <?= htmlspecialchars($_SESSION['message']) ?>
+            </div>
+            <?php unset($_SESSION['message']); ?>
+        <?php endif; ?>
+        
 <section>
     <div class="container">
         <h3 class="my-3">Login Page</h3>
@@ -14,6 +21,8 @@
             </div>
             <button type="submit" name="login" class="btn btn-primary">Sign In</button>
         </form>
+
+
         <p class="mt-3">Already have an account? <a href="/create_account">Register here</a></p>
         <hr>
         <a href="home.php" class="btn btn-secondary">Go back</a>
