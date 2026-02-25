@@ -8,10 +8,10 @@ if ($result) {
     $_SESSION['timestamp'] = $unix_timestamp;
     $_SESSION['user_id'] = $result['user_id'];
 
+
     renderView('home_get', ['userData' => $result]);
 } else {
-    $_SESSION['message'] = 'Email or Password invalid';
-    renderView('login_get');
-    unset($_SESSION['message']);
-    unset($_SESSION['timestamp']);
+    $_SESSION['message'] = 'Email or password invalid';
+    header('Location: /login');
+    exit;
 }

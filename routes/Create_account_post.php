@@ -23,11 +23,21 @@ if ($date) {
    }
 }
 
+if (emailExists($email)) {
+   $_SESSION['membership'] = 'อีเมลนี้ถูกใช้งานแล้ว โปรดใช้อีเมลอื่น';
+   header('location: /create_account');
+   exit;
+}
+
 $resule = membership($username, $fname, $lname, $date, $gender, $email, $password, $age);
 if ($resule) {
    $_SESSION['membership'] = 'สมัครสมาชิกเรียบร้อย';
    header('location: /create_account');
 } else {
-   $_SESSION['membership'] = 'สมัครสมาชิกไม่สำเร็จ';
+   if (emailExists($email)) {
+      $_SESSION['membership'] = 'อีเมลนี้ถูกใช้งานแล้ว โปรดใช้อีเมลอื่น';
+   } else {
+      $_SESSION['membership'] = 'สมัครสมาชิกไม่สำเร็จ';
+   }
    header('location: /create_account');
 }

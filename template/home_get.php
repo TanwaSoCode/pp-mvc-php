@@ -2,6 +2,6 @@
     <div class="container">
         <h1 class="display-5 fw-bold"> กิจกรรมที่น่าสนใจ รอคุณอยู่! </h1>
         <p class="lead">เข้าร่วมกิจกรรม สนุกไปกับเพื่อนใหม่ และรับประสบการณ์ดีๆ</p>
-        <a href="" class="btn btn-light btn-lg fw-bold shadow">ดูรายละเอียดกิจกรรม</a>
+        <a href="/events" class="btn btn-light btn-lg fw-bold shadow">ดูรายละเอียดกิจกรรม</a>
     </div>
 </section>
